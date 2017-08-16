@@ -5,7 +5,7 @@ Loads the pretrained GloVe embeddings (from embeddings.json). Vocabulary is stor
 ### To run:
 
 ```
-usage: CLEVR_glove.py [-h] ----embedding_file EMBEDDING_FILE --vocab_file VOCAB_FILE [--log_dir LOG_DIR]
+usage: python CLEVR_glove.py [-h] --embedding_file EMBEDDING_FILE --vocab_file VOCAB_FILE [--log_dir LOG_DIR]
 
 required arguments:
   --embedding_file EMBEDDING_FILE     The file with embeddings
@@ -13,7 +13,7 @@ required arguments:
 
 optional arguments:
   -h, --help                show this help message and exit
-  --log_dir LOG_DIR         Summaries log directory
+  --log_dir LOG_DIR         Summaries log directory (default: logs/)
 ```
 
 

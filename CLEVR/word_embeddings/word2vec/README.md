@@ -5,14 +5,14 @@ Trains word2vec on CLEVR questions and answers, stores results (vocabulary) in m
 ### To run:
 
 ```
-usage: CLEVR_word2vec.py [-h] --data_file DATA_FILE [--log_dir LOG_DIR]
+usage: python CLEVR_word2vec.py [-h] --data_file DATA_FILE [--log_dir LOG_DIR]
 
 required arguments:
   --data_file DATA_FILE     The file with question data
 
 optional arguments:
   -h, --help                show this help message and exit
-  --log_dir LOG_DIR         Summaries log directory
+  --log_dir LOG_DIR         Summaries log directory (default: logs/)
 ```
 
 

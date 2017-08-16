@@ -11,12 +11,18 @@ from tensorflow.contrib.tensorboard.plugins import projector
 FLAGS = None
 
 def build_embedding_matrix(embedding_file, vocab_file):
+  # Load the word2vec pretrained on Google news corpus.
+  print ("Loading the binary vector embeddings, this might take a while...")
   model = gensim.models.KeyedVectors.load_word2vec_format(embedding_file, binary=True)
+  # Get vocabulary from external file.
   vocabulary = [word.strip() for word in open(vocab_file)]
+  # Create empty embedding - with embedding size of 300 (as original model embeddings are of size 300).
   embedding = np.zeros((len(vocabulary), 300))
   for i, word in enumerate(vocabulary):
     try:
+      # Find the word in the model.
       vec = model.word_vec(word).reshape(1, 300)
+      # Add vector to embedding.
       embedding[i] = vec
     except KeyError:
       print('\"%s\" has no word vector' %(word))
