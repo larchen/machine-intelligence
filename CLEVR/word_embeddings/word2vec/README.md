@@ -1,6 +1,6 @@
 ## Word2Vec on CLEVR questions
 
-Trains word2vec on CLEVR questions and answers
+Trains word2vec on CLEVR questions and answers, stores results (vocabulary) in metadata.tsv. You can use Tensorboard for visualization of results.
 
 ### To run:
 
