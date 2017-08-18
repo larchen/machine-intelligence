@@ -13,10 +13,8 @@ from tensorflow.contrib.lookup import index_to_string_table_from_file
 
 id_to_w = {}
 id_to_ans = {}
-# img_dir = '/Users/larrychen/google-drive/GitHub/machine-intelligence/CLEVR/training_data/train_subset_000/images/'
-img_dir = '/home/lchen/Documents/CLEVR_v1.0/images/train/'
-# question_dir = '/Users/larrychen/Downloads/CLEVR_v1.0/questions/CLEVR_train_questions.json'
-question_dir = '/home/lchen/Documents/CLEVR_v1.0/questions/CLEVR_train_questions.json'
+img_dir = '/home/tkornuta/tensorflow/data/clevr/training_data/train_subset_000/images/'
+question_dir = '/home/tkornuta/tensorflow/data/clevr/training_data/questions/train_questions_subset_000.json'
 pretrained = {}
 
 

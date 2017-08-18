@@ -1,6 +1,6 @@
 ## Word2vec embeddings pretrained Google News 
 
-Loads word2vec vector model pretrained Google News and filters embeddings for words used in CLEVR questions. You can use Tensorboard for visualization of results.
+Loads word2vec vector model pretrained Google News and filters embeddings for words used in CLEVR questions and answers. You can use Tensorboard for visualization of results.
 
 The `word2vec` pre-trained **Google News** corpus (3 billion running words) word vector model (3 million 300-dimension English word vectors) can be downloaded from:
 

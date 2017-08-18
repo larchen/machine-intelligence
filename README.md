@@ -19,7 +19,14 @@ Trains word2vec on CLEVR questions and answers, stores results (vocabulary) in m
 #### CLEVR/word_embeddings/glove/CLEVR_glove.py
 Loads the pretrained GloVe embeddings (from embeddings.json). Vocabulary is stored in vocab.tsv. You can use Tensorboard for visualization of results.
 
-#### CLEVR/word_embeddings/glove/CLEVR_glove.py
+#### CLEVR/word_embeddings/google_news/CLEVR_google_news
+Loads word2vec vector model pretrained Google News and filters embeddings for words used in CLEVR questions and answers. You can use Tensorboard for visualization of results.
+
+#### CLEVR/rnn
+Script using RNN (LSTM) for solving the QA task (i.e. using only questions from CLEVR). ("LSTM Q")
+
+#### CLEVR/cnn
+Script using CNN+RNN (LSTM) for solving the VQA task.
 
 
 
