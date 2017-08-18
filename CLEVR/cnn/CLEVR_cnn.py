@@ -13,8 +13,10 @@ from tensorflow.contrib.lookup import index_to_string_table_from_file
 
 id_to_w = {}
 id_to_ans = {}
-img_dir = '/home/tkornuta/tensorflow/data/clevr/training_data/train_subset_000/images/'
-question_dir = '/home/tkornuta/tensorflow/data/clevr/training_data/questions/train_questions_subset_000.json'
+# Directory containing images - do not forget about the last slash '/' ;)
+img_dir = '/home/tkornuta/workspace/data/CLEVR_v1.0/images/train/'
+# Point to a question file for a given set of images.
+question_dir = '/home/tkornuta/workspace/data/CLEVR_v1.0/questions/CLEVR_train_questions.json'
 pretrained = {}
 
 
@@ -106,6 +108,7 @@ def serialize_examples(question_file, dictionary):
   assert len(labels) == len(examples), "Num examples does not match num labels"
   print('Done.')
 
+  # Makes length-of-the-questin + answer + image_file triplets and packs them into tfrecord.
   def make_example(question, answer, image_file):
     ex = tf.train.SequenceExample()
     ex.context.feature['length'].int64_list.value.append(len(question))
@@ -525,7 +528,8 @@ def main(embedding):
 
 if __name__ == '__main__':
   embedding, dictionary, reverse_dictionary = build_embeddings('data/embeddings.json', 'data/vocab.tsv')
-  # serialize_examples(question_dir, dictionary)
+  # The following function generates the tfrecord used by the main.
+  #serialize_examples(question_dir, dictionary)
   main(embedding)
   # test_imagenet('/Users/larrychen/Downloads/images')
   # run_lstm(embedding)
