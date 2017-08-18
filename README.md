@@ -22,6 +22,8 @@ Loads the pretrained GloVe embeddings (from embeddings.json). Vocabulary is stor
 #### CLEVR/word_embeddings/google_news/CLEVR_google_news
 Loads word2vec vector model pretrained Google News and filters embeddings for words used in CLEVR questions and answers. You can use Tensorboard for visualization of results.
 
+## CLEVR baselines
+
 #### CLEVR/rnn
 Script using RNN (LSTM) for solving the QA task (i.e. using only questions from CLEVR). ("LSTM Q")
 
